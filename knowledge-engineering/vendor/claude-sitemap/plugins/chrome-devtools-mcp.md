@@ -1,0 +1,7 @@
+Control and inspect a live Chrome browser directly from your coding agent. Chrome DevTools MCP provides 29 tools spanning browser automation, performance profiling, network analysis, and debugging — giving Claude full DevTools capabilities through Puppeteer and the Chrome DevTools Protocol.
+
+Automate browser interactions with tools for clicking, typing, filling forms, uploading files, navigating pages, and handling dialogs. Emulate mobile devices and custom viewports to test responsive designs. Record performance traces and memory snapshots to diagnose bottlenecks, run Lighthouse audits, and get actionable performance insights including CrUX field data.
+
+Inspect network requests, read console messages with source-mapped stack traces, capture screenshots, take DOM snapshots, and execute JavaScript in the page context. A slim mode is available for lighter, basic browser tasks.
+
+**How to use:** Ask Claude to interact with your running application in Chrome. Example prompts: "Open my app at localhost:3000 and click the login button", "Record a performance trace while I scroll the page and tell me what's slow", "Take a screenshot of the homepage on a mobile viewport", "Check the console for errors after submitting the form", "Run a Lighthouse audit on this page and summarize the results", "List all network requests made when the dashboard loads".

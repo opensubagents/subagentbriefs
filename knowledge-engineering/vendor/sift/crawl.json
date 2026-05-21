@@ -1,0 +1,24 @@
+{
+  "name": "sift",
+  "homepage": "https://sift.com",
+  "llms_txt_candidates": [
+    "https://sift.com/llms.txt",
+    "https://sift.com/developers/llms.txt"
+  ],
+  "transform": "html-extract",
+  "allow_prefixes": [
+    "https://sift.com/"
+  ],
+  "deny_prefixes": [
+    "https://sift.com/careers/",
+    "https://sift.com/jobs/",
+    "https://sift.com/legal/",
+    "https://sift.com/cookie-policy",
+    "https://sift.com/privacy-policy"
+  ],
+  "page_cap": 100,
+  "html_extract": {
+    "selector": "main, article, [class*=\"content\"]"
+  },
+  "llms_txt": "https://sift.com/llms.txt"
+}

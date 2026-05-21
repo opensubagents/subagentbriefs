@@ -1,0 +1,1 @@
+At Anthropic, we believe AI has the power to fundamentally transform education for the better, but only if educators and universities lead the charge. We develop Claude with powerful safeguards to ensure it remains a beneficial tool for students, faculty, and administrators.

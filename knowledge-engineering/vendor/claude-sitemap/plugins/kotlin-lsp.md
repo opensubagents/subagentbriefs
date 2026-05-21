@@ -1,0 +1,5 @@
+The Kotlin LSP plugin brings advanced Kotlin language intelligence to Claude Code, powered by JetBrains' official Kotlin Language Server. It provides IDE-quality code intelligence for Kotlin source files (.kt) and Kotlin script files (.kts), leveraging technology from IntelliJ IDEA.
+
+Key features include semantic highlighting, code completion, on-the-fly diagnostics, navigation to Kotlin and Java sources, code actions with quickfixes and inspections, import organization, rename refactoring, and documentation hovers. The plugin is optimized for JVM-only Kotlin Gradle projects.
+
+**How to use:** Install the Kotlin LSP CLI with `brew install JetBrains/utils/kotlin-lsp` (requires Java 17+). Once installed, the plugin automatically activates when working with Kotlin files, providing intelligent code suggestions, error diagnostics, and refactoring capabilities as you develop.

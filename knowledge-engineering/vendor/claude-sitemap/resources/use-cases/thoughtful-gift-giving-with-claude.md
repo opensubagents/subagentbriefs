@@ -1,0 +1,1 @@
+The best gifts show you've been paying attention. Claude helps you think through gift ideas that actually fit each person, not just generic suggestions by category. From there, you can search your notes and messages for hints you've forgotten, use web search to find specific products locally, and use Claude for Chrome to buy, book pickup, and coordinate with others.

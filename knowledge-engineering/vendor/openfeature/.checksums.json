@@ -1,0 +1,386 @@
+{
+  "https://openfeature.dev/docs/category/concepts": {
+    "sha256": "a9c16b5933443b85c84b588ea3cbe548b31daf4fa14a1752d3bcdaa244405e57",
+    "etag": "\"f7c9670e7a574dc8d6d8daf5440435ac-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/docs/category/getting-started": {
+    "sha256": "ed9fcfe7c91b5cf638e4319d5af4b4d766ce27e012486bd3f8951b90119476bc",
+    "etag": "\"57b50d0f90c65e31fc524c4e04b74d77-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/docs/category/java-sdk": {
+    "sha256": "4ad523d352e7affc2876bc7dbd29f8580fd93da746b6fbe4824a14ac90ee0bce",
+    "etag": "\"f7fe144b29bc3932ec8a94e775769bc2-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/docs/category/openfeature-operator": {
+    "sha256": "5b71f72c4d6af48bb5756b2851d5f87ffa4c6b773af8da8567716e73ca800644",
+    "etag": "\"138e0bc321a705184482d85724c3e6e4-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/docs/category/other-technologies": {
+    "sha256": "1478ce58212c7b3025be159063651705fddaaab91418ad041f6f77c4860ae283",
+    "etag": "\"3b4e93c94e53f4a6254105a611f416b7-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/docs/reference/concepts/evaluation-api": {
+    "sha256": "5d46de75c7b5462f38746504511285974de4d30b04831812253f1d2a2c5396f5",
+    "etag": "\"8f147e06c9d4afcda335f12179219bd4-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/docs/reference/concepts/evaluation-context": {
+    "sha256": "1d316fb90a7052aac235321f3d1e049096f0f14dfda94e69f9d1089294f56c21",
+    "etag": "\"998e85452066236a4d184afc00b6b339-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/docs/reference/concepts/events": {
+    "sha256": "d5dfe0cc770271e7ee6e1705b6b442ee9a934f41070bc0fb2a6d50408b9fd1be",
+    "etag": "\"f40dc5a10428e56df795e610f96fbdd6-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/docs/reference/concepts/hooks": {
+    "sha256": "ba3f664843f569b81bda4237f890f4056e80ec98e66af9954368e3fe9e66161c",
+    "etag": "\"de86829ea02e17e59e2336d1426dad03-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/docs/reference/concepts/provider": {
+    "sha256": "af469044ebf23b24a3fb446949c27926adfad0c1a87b2fbff187ea9496535b45",
+    "etag": "\"192f2c9f7054d7bfa77a4920e75ccb7a-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/docs/reference/concepts/sdk-paradigms": {
+    "sha256": "a38fdf61e827371aa26be1d4fc3633561255bdd9bc60f1f3f0bac18499d4df33",
+    "etag": "\"408b278918ad8fce5adb8610948c3731-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/docs/reference/concepts/tracking": {
+    "sha256": "9bd6ce48f78e90ee585c3ea35876c8b19ac1e4c13da002b66b1434d5d9002e4d",
+    "etag": "\"9f73fc7c04de0a789fae77c6ef9315a5-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/docs/reference/contributing": {
+    "sha256": "6220523b0a277dbb24489cf2f2c0df309de63dbc61708f92de2304f8fb6d6dcc",
+    "etag": "\"769991c0c82875132d823c455ca40029-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/docs/reference/intro": {
+    "sha256": "c6db984ad55b991fba7efbdfb96598a3a0f8ad0907a5accb2722369beae8feb9",
+    "etag": "\"ae3fcb1e41a1f62d0db616a9d6bc6525-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/docs/reference/other-technologies/cli": {
+    "sha256": "e82828af17eb782caad9c49377d79dd7d4ce31dfc2ec3b2dbea761b1c4de434f",
+    "etag": "\"af1ed8aa9a5a0ab8e46e0fdb632bfe25-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/docs/reference/other-technologies/mcp": {
+    "sha256": "6b01836416f4dccfe94aae30fb4fd4cf5843a025d213dea84340ab5d1bbd3fa1",
+    "etag": "\"14d7cd3fe581ce8437b973c60e4d81db-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/docs/reference/other-technologies/ofrep/": {
+    "sha256": "baa6ba75015170a93c5ecfdfa5ae0108d3edcbbdbb874ab27893b9d98be849f2",
+    "etag": "\"66ce6cde034f066ca72de1632e418e2a-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/docs/reference/other-technologies/ofrep/openapi": {
+    "sha256": "ced51633e04eafca6fca0c1518027d7bf7ef6fc5515b512b1fbd69873a43a87d",
+    "etag": "\"ecedfc17e8cba017ad5488fb9adeb57f-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/docs/reference/sdks/": {
+    "sha256": "ef8374acb2a1c6a8ede51eeff6610b263b6e0f1f960103f4a2cec2e3eb30c93d",
+    "etag": "\"261ea3b4b1ab2cefeae5d5f256d4e1b3-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/docs/reference/sdks/client/": {
+    "sha256": "18ff6c3ae25c1ba75fb1ab5dbe2951977482348b3d333ac19ce66af8821f5f68",
+    "etag": "\"66b7352763c61ab021a7fcc09ffa6754-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/docs/reference/sdks/client/kotlin": {
+    "sha256": "a1955863b8c2de9c831e23627de083df0caa9ad638459f91d8754a338222fe0d",
+    "etag": "\"a57d8dfb52b2a70cb734befc8b16ed23-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/docs/reference/sdks/client/swift": {
+    "sha256": "0a44c3d04511f691194f46cae5095efdcc163134382f2216f3719f10f761621b",
+    "etag": "\"60c1e0fc8f628a44ead07a850aee758c-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/docs/reference/sdks/client/web/": {
+    "sha256": "feaa56995a6d0675b598378b86e9dda73493d693bb68e0cd9ac387b6d40756f8",
+    "etag": "\"37a609d64fecf53bd7f6bc7ccc47e1a7-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/docs/reference/sdks/client/web/angular": {
+    "sha256": "0e002c34884741dfc83cb6b8a7200d206d1f2fb43b099af54f8fa0f7fc132e6f",
+    "etag": "\"1323a0154c7ffdf7a8dd34ed38736fce-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/docs/reference/sdks/client/web/react": {
+    "sha256": "700f5df31f4bd83881c17536cf05dee9036797dcc0b448b0137e043ec4348f6c",
+    "etag": "\"145c46f2435729fe0e40ecf313454bc6-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/docs/reference/sdks/sdk-compatibility": {
+    "sha256": "da858ce2f546e0e24e1b89c0d6942164b7a708d280815820f90d980e0f488e75",
+    "etag": "\"bacfc97826e0e2bbc2e8a06721494d39-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/docs/reference/sdks/server/": {
+    "sha256": "135bc69595e9859672753ef2932a2fe1da3c870e48c43263d6a7f78bd5c9edd1",
+    "etag": "\"ad127dacc45871a7d75968d4eba0dc85-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/docs/reference/sdks/server/cpp": {
+    "sha256": "f5f20cfcfed8f345e6a51909291d0f743ee9a219b2865f4d6842e4154af14e9d",
+    "etag": "\"fd4aefa13315ad97884ac33191929927-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/docs/reference/sdks/server/dart": {
+    "sha256": "34f547c6d74a3c3b6576444c47958ba3b214bcc0c34df1048f4d8d660c5367fc",
+    "etag": "\"898a0650d1d371a400d1204063e70ac8-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/docs/reference/sdks/server/dotnet": {
+    "sha256": "b76a340b01c68620563ae31e488053a2ef2cbe89d3ba778a61789be666bd31c8",
+    "etag": "\"e63b206af31c106f3533cf984610e03d-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/docs/reference/sdks/server/go": {
+    "sha256": "18a17a58ebebcffa26208bb8340f56fdf599b5f8a03b6b5b5538f9f512ba0f5f",
+    "etag": "\"10191b2fc9c4063d74c032a5017aa19a-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/docs/reference/sdks/server/java": {
+    "sha256": "f657471e2f1866221d6bf15adf7b4e4e91d4a74f32ba4436fd99e9ba621d4c88",
+    "etag": "\"e76ea9de468e817976e16cb222ddf45e-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/docs/reference/sdks/server/javascript/": {
+    "sha256": "b96bb4911814e051eb73ed313813596fe5f342fbb8d8dd79a4a67fd5cc641abf",
+    "etag": "\"240b30eb8bddc395c87390bdd09f5705-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/docs/reference/sdks/server/javascript/nestjs": {
+    "sha256": "c523086490060da68719d184abb6a3ccb5827d96d38bc87b6863e224d80c2651",
+    "etag": "\"e6f4bbdfbf893e7f5fc84002e532356f-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/docs/reference/sdks/server/php": {
+    "sha256": "4b2e614389abc9c9ce29405331f0a0c6e47d6fcacba35358b7955c6e490b460f",
+    "etag": "\"7c1e1330cf113dcc6c70f5b0c8f36629-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/docs/reference/sdks/server/python": {
+    "sha256": "ea19cce937adb062b36f4134e7df10dd19383c563351c2460bbc90df66e6d6af",
+    "etag": "\"89dc2607e4017283427ab5a7e53cf80a-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/docs/reference/sdks/server/ruby": {
+    "sha256": "5ae3889b73d45e96b833745c998ee30ad4f19751477e45ab43557f93c7e1a838",
+    "etag": "\"37fb5d5ea58bea1145beb190d964b568-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/docs/reference/sdks/server/rust": {
+    "sha256": "7c4d90025c4e85a01739eefccf7f509dc130b336a7cdf32f513d4eebb2892a86",
+    "etag": "\"e42a843e9f563e8d4e312d5e939ab4ca-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/docs/tutorials/five-minutes-to-feature-flags": {
+    "sha256": "cb66c8a7475dc2cbcae74308266d11a2185a1f69b5b917bd23ee6178a808d1c8",
+    "etag": "\"cfe282e0aea987564a562d6003858bc2-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/docs/tutorials/getting-started/dotnet": {
+    "sha256": "272b5001c19505cd96aaab89e588bd33140ccdb3866209bd030325cf8a102803",
+    "etag": "\"918df9404081d7be4f4f7e91555170c1-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/docs/tutorials/getting-started/go": {
+    "sha256": "fa7a1221c26873f3cf617448e5a2a7e493c989035b0becbaab058b93d4e39fde",
+    "etag": "\"8146f1042f69649f14a6642c9227f443-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/docs/tutorials/getting-started/java/dropwizard": {
+    "sha256": "d8e24ad1ee1da6de84290f1030518ca00e17169448a3274905f6c4a12d762126",
+    "etag": "\"9181dc127ebee5c051a376ee9280db52-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/docs/tutorials/getting-started/java/spring-boot": {
+    "sha256": "628be9a4a7887b6c97e387b003519b628c667b62e64463a07b6431cf2ac626ea",
+    "etag": "\"78dafdffbabee8bada1aadf3cc72566b-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/docs/tutorials/getting-started/node": {
+    "sha256": "40ad8a768052ca69c3ad35737709b6020d358aedc6b19afcb2b9631dbaa4fd74",
+    "etag": "\"b58c2a680e08bfa4d895451d0c27916a-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/docs/tutorials/getting-started/php": {
+    "sha256": "95564bcd212b9c9ed0377618341ca1d7cf9f21dcd6a107ede3befe31d9a1f2c7",
+    "etag": "\"eb4144c010c46860ce4142049049a26a-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/docs/tutorials/getting-started/python": {
+    "sha256": "2143b928284890b2c172acec272339bc16b8497d85ef27c0e7f45cfa4c8e8601",
+    "etag": "\"71ff616e2081635a4180e46f4301950d-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/docs/tutorials/getting-started/rust": {
+    "sha256": "4fd22f4d6852bacadcfe8f1a204253deefadd67cacb6d972134391bf1f08cc7d",
+    "etag": "\"6bbadb14966420bbeef7401b8b590321-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/docs/tutorials/open-feature-cli": {
+    "sha256": "90a6b5f17dbb5a28c543a340ccd43503dee10b31d968f54770096b9d4c86eed7",
+    "etag": "\"ade92f4eed9bc4d209229b3eef98e2a4-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/docs/tutorials/open-feature-operator/advanced-topics": {
+    "sha256": "31311b978ff4b74de935c79311cce0276b133bd98b08d9a5452f4aa071cf67aa",
+    "etag": "\"e96731e1ac8efb5a17042e391965d8ac-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/docs/tutorials/open-feature-operator/quick-start": {
+    "sha256": "5586824ace15674c40111f034ddda62e6ae09acde7b1a315e3e27b04f982df37",
+    "etag": "\"044cef6eaedbecbd165e2e73d3054b1c-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/specification/": {
+    "sha256": "510ae10fadb60803e60dd0a59caf1e2f0ea8376003ef0654a924b819881f9ee3",
+    "etag": "\"6c71758abca924a84a8d17779a4b49d1-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/specification/appendix-a": {
+    "sha256": "56bf142532689e33321e47c4ac3e183a52f90b8df080a972d947a5b540e9acc3",
+    "etag": "\"f8bcc0ca76be4b2292197b2420990d29-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/specification/appendix-b": {
+    "sha256": "b452b7d82cad1eb577856b142443dd15f0e7e027b655955c53356144fd462c46",
+    "etag": "\"d40486b879c5b9e56446f13116acb012-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/specification/appendix-c/": {
+    "sha256": "0848542166763a1c1ad32f117b3772a18a83968a59d2c7ce54e90d70ed43a0f1",
+    "etag": "\"b2067e67882951f5415ed2fc97d3abfa-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/specification/appendix-d": {
+    "sha256": "a771225bfa595c48fad10bb9f6df399f9e233ae0e96210cde31761993b0e787e",
+    "etag": "\"42931e6485522777909153a7860e8ce0-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/specification/category/sections": {
+    "sha256": "d4584ec0e2d1859889ab1722ef103fc4c316d8f1c257701162f25a9e3fa83bbc",
+    "etag": "\"304b42d95a542a1a7523e181c9d87191-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/specification/glossary": {
+    "sha256": "50b7be399140b782d5f5923f05d95d20eb3bb352936234e645b889f7c5188f5f",
+    "etag": "\"ef0c1e98387ab7a65f3dc3470ecb5a77-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/specification/sections/evaluation-context": {
+    "sha256": "23b2cefd88a8eef3aa3c5d104468a4ac4cd865f26cb523d23ca77ccd827f80dc",
+    "etag": "\"0201211d3c4fd9114200b8949b75dbb3-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/specification/sections/events": {
+    "sha256": "5849bec5b9fb8fa4e3bf247273a18a8e1cfa87b127b8893548e26054c0213ef4",
+    "etag": "\"5bd784da858c494b359a81b525e1b8a4-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/specification/sections/flag-evaluation": {
+    "sha256": "ef82c8df90b21b2e0f657c1ff75d801418583f69716b0a81c42aa1bf2344edf3",
+    "etag": "\"2532420cff0c98df1b51e8dccf61d628-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/specification/sections/hooks": {
+    "sha256": "556f609e4ac57d990a2ab2121043dc869a391d93609c29f352867f8f78da0397",
+    "etag": "\"58343e5f93aa9151cf764744c1fbec18-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/specification/sections/providers": {
+    "sha256": "c28381ce31631dc4ff155363a42d49d7fdce29155f64e53f52a5dc4e3b14c5ca",
+    "etag": "\"d279d973d081fe54d4912068cfbbe913-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/specification/sections/tracking": {
+    "sha256": "cb59f933172598eaa82b40d6aed3aa77b82898b35f1ee7e73fdb21bb1a4c97d1",
+    "etag": "\"1f83bf305a55bd08e7cf509923a93cf2-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  },
+  "https://openfeature.dev/specification/types": {
+    "sha256": "194dd82bdbbfacbcfd72ac4615242e52bd38a1309dd3470f6b93857347588abf",
+    "etag": "\"63b57b93a9027872472f55805bced91a-ssl-df\"",
+    "fetchedAt": "2026-05-16T05:49:06.007Z",
+    "lastStatus": 200
+  }
+}

@@ -1,0 +1,5 @@
+Integrates gopls, the official Go language server, into Claude Code for enhanced Go development. This plugin provides intelligent code navigation, real-time diagnostics, code completion, and automated refactoring for Go projects.
+
+Key features include jump-to-definition, find references, comprehensive autocompletion, static code analysis, vulnerability checking, and modernization suggestions. The plugin supports Go modules, multi-module workspaces, and GOPATH modes.
+
+**How to use:** Once installed, the language server automatically activates for .go files. Claude will leverage gopls to understand your Go codebase, navigate between definitions and references, identify issues, and suggest refactorings. Simply ask Claude to help with Go code tasks like "find all references to this function" or "refactor this struct".

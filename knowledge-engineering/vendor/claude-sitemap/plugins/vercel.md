@@ -1,0 +1,5 @@
+Deploy and manage your applications on Vercel directly from Claude Code. This plugin integrates Vercel's deployment platform into your development workflow, enabling production deployments, real-time log monitoring, and project configuration without leaving your coding environment.
+
+Key features include one-command production deployments, live log streaming with the --follow flag for real-time debugging, and streamlined project setup with environment variable management. The plugin handles Vercel CLI authentication and project linking automatically.
+
+**How to use:** Run `/deploy` to push your application to production, `/vercel-logs` to fetch and analyze deployment logs, or `/vercel-setup` to initialize Vercel CLI and link your project. You can also say "deploy my app to Vercel" or "check my deployment logs" to trigger these capabilities.

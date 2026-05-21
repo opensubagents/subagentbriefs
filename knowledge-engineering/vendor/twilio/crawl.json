@@ -1,0 +1,19 @@
+{
+  "name": "twilio",
+  "homepage": "https://www.twilio.com",
+  "llms_txt_candidates": [
+    "https://www.twilio.com/llms.txt",
+    "https://www.twilio.com/docs/llms.txt",
+    "https://docs.twilio.com/llms.txt"
+  ],
+  "transform": "append-md-and-accept",
+  "allow_prefixes": [
+    "https://www.twilio.com/docs/",
+    "https://docs.twilio.com/"
+  ],
+  "deny_prefixes": [
+    "__DEFER_TO_PHASE_2B__"
+  ],
+  "page_cap": 200,
+  "llms_txt": "https://www.twilio.com/docs/llms.txt"
+}

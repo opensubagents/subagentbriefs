@@ -1,0 +1,1 @@
+Last tick: 2026-05-18T08:22:07Z — main HEAD=e7bf14e. OINST1 landed (frontend+cloudflare version bumps, infra/cloudflare/package-lock.json now tracked). Queue: #242 (OCP7 tracker), #240, #174, #155; OPROC1 in flight.

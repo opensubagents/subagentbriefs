@@ -1,0 +1,1 @@
+Claude's ability to research regulatory requirements and nonprofit-specific considerations, combined with your knowledge of your organization's mission and values, lets you create comprehensive AI governance policies without expensive consultants.

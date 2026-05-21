@@ -1,0 +1,59 @@
+# .github/workflows/auto-merge.yml
+#
+# Enables auto-merge on PRs labeled `automerge` once required checks
+# pass. Combined with the branch ruleset created by
+# scripts/setup-branch-protection.ts, this completes the no-HITL loop.
+#
+# Cited from seeds/prompts/operator-2026-05-10-autonomy.md.
+#
+# Behavior:
+#   - On PR open / label / sync / ready_for_review: if labeled
+#     `automerge` and not a draft, call `gh pr merge --auto --squash`.
+#     GitHub then merges the PR automatically once required checks pass.
+#   - When the heartbeat opens a PR, it labels `automerge`. This
+#     workflow enables the auto-merge state machine; the branch
+#     ruleset's required checks decide when it fires.
+#
+# What guarantees "no merge with failing CI or conflicts":
+#   - The branch ruleset (scripts/setup-branch-protection.ts) sets
+#     `strict_required_status_checks_policy: true`, which forces the
+#     branch to be up-to-date with main before merge. Behind-main
+#     branches block until rebased -- eliminates conflict-as-merged
+#     and stale-base-passing-checks races.
+#   - Required status check contexts on main: `npm run verify` and
+#     `OSV-Scanner (PR) / osv-scan`. Auto-merge waits for ALL required
+#     contexts to succeed before squashing.
+#   - This workflow only ENABLES auto-merge; the ruleset enforces the
+#     gate at merge time.
+
+name: auto-merge
+
+on:
+  pull_request_target:
+    types: [opened, reopened, synchronize, labeled, ready_for_review]
+    branches: [main]
+
+permissions:
+  pull-requests: write
+  contents: write
+
+concurrency:
+  group: auto-merge-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  enable-auto-merge:
+    if: |
+      !github.event.pull_request.draft &&
+      contains(github.event.pull_request.labels.*.name, 'automerge')
+    name: Enable auto-merge (squash)
+    runs-on: ubuntu-latest
+    # OGHW2: bounded timeout. `gh pr merge --auto` is a single API call.
+    timeout-minutes: 5
+    steps:
+      - name: Enable auto-merge
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_URL: ${{ github.event.pull_request.html_url }}
+        run: |
+          gh pr merge --auto --squash "$PR_URL"

@@ -1,0 +1,3 @@
+Claude on your desktop can research exercises for specific needs—physical therapy, general fitness, injury recovery, or flexibility—and create structured routines saved directly to your Notes app. Instead of piecing together advice from multiple websites, you get organized programs you can reference during workouts.
+
+Tell Claude what you're working on, any limitations or goals, and what format would help you follow through.

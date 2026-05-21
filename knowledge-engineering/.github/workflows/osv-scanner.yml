@@ -1,0 +1,92 @@
+# .github/workflows/osv-scanner.yml
+#
+# OSV-Scanner (Google) — open-source dependency vuln gate.
+# Checks lockfiles against the OSV.dev database, which aggregates
+# advisories from GHSA, npm, PyPI, RustSec, Go vulndb, OSS-Fuzz, etc.
+#
+# Cited from (local mirror):
+#   vendor/osv-scanner/google.github.io/osv-scanner/github-action/index.md
+#   vendor/osv-scanner/google.github.io/osv-scanner/configuration/index.md
+#   vendor/osv-scanner/google.github.io/osv-scanner/usage/index.md
+# Upstream:
+#   https://osv.dev/
+#   https://google.github.io/osv-scanner/
+#   https://github.com/google/osv-scanner
+#   https://github.com/google/osv-scanner-action/releases (track here)
+#
+# Runs on every PR + weekly cron. Fail-on-vuln gates merges via exit code.
+# SARIF upload is deliberately disabled (see comment near upload-sarif).
+#
+# Note: infra/cloudflare/package.json has no lockfile yet (npm install
+# is run only at deploy time per docs/governance.md). We let OSV-Scanner
+# auto-discover lockfiles via `-r ./` and rely on it skipping the bare
+# package.json there; if/when infra/cloudflare gets its own lockfile,
+# it will be picked up automatically.
+
+name: osv-scanner
+
+on:
+  pull_request:
+    # ready_for_review fires the PR scan when a draft is promoted so the
+    # required-status-check gate on main is never blocked indefinitely.
+    types: [opened, synchronize, reopened, ready_for_review]
+    branches: [main]
+  push:
+    branches: [main]
+  schedule:
+    - cron: "0 6 * * 1"   # Mondays 06:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  security-events: write
+  actions: read
+
+concurrency:
+  group: osv-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  scan-pr:
+    # OAUTO14: also run on workflow_dispatch so OAUTO12's auto-rebase
+    # redispatch produces the ruleset-required "OSV-Scanner (PR) / osv-scan"
+    # context. Without || workflow_dispatch this job is skipped on dispatch
+    # and scan-main runs instead, producing the wrong context name and
+    # leaving the PR BLOCKED forever. See ADR 2026-05-17-auto-merge-recovery.md.
+    #
+    # Draft gate: skip while the PR is a draft. The `pull_request:` trigger
+    # above includes `ready_for_review`, so the check fires when the draft
+    # is promoted — the required-status-check gate is never permanently
+    # blocked. Single-line `if:` so auto-rebase-retrigger.test.ts's regex
+    # `if:[^\n]*workflow_dispatch` matches it.
+    if: (github.event_name == 'pull_request' && github.event.pull_request.draft == false) || github.event_name == 'workflow_dispatch'
+    name: OSV-Scanner (PR)
+    uses: google/osv-scanner-action/.github/workflows/osv-scanner-reusable-pr.yml@v2.3.8
+    with:
+      # OHYG1: explicit --experimental-exclude is a belt-and-suspenders for
+      # third_party/. The dir is gitignored (OSV --use-gitignore is default-on
+      # and would already skip it), but if anyone ever removes the gitignore
+      # entry we still don't scan 13k+ upstream files. See ADR 2026-05-18.
+      scan-args: |-
+        -r
+        --experimental-exclude=third_party
+        ./
+      # SARIF upload requires GitHub Advanced Security / Code Scanning,
+      # which is a paid feature. We deliberately leave it off: OSV-Scanner
+      # still runs on every PR and weekly cron, and fail-on-vuln still
+      # gates merges via the action's exit code. The only thing we give
+      # up by skipping SARIF is the Security-tab UI; the gate itself is
+      # unchanged. Decision recorded in issue #36 (2026-05-15).
+      upload-sarif: false
+
+  scan-main:
+    if: github.event_name != 'pull_request'
+    name: OSV-Scanner (push / schedule)
+    uses: google/osv-scanner-action/.github/workflows/osv-scanner-reusable.yml@v2.3.8
+    with:
+      # OHYG1: see scan-pr above for the third_party exclude rationale.
+      scan-args: |-
+        -r
+        --experimental-exclude=third_party
+        ./
+      upload-sarif: false

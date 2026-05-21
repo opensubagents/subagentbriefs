@@ -1,0 +1,14 @@
+{
+  "name": "intercom",
+  "homepage": "https://developers.intercom.com",
+  "llms_txt_candidates": [
+    "https://developers.intercom.com/llms.txt"
+  ],
+  "transform": "verbatim",
+  "allow_prefixes": [
+    "https://developers.intercom.com/"
+  ],
+  "deny_prefixes": [],
+  "page_cap": 100,
+  "llms_txt": "https://developers.intercom.com/llms.txt"
+}
