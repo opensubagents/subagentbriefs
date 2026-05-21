@@ -1,0 +1,139 @@
+# PRD: subagentbriefs — iPhone-readable brief pages
+
+## Why
+
+The operator works from iPhone Chrome (claude.ai web, not the mobile app).
+Briefs need to be readable, navigable, and shareable from a phone — not
+trapped in chat scrollback, not requiring an IDE, not requiring a desktop.
+
+Adjacent context:
+- The knowledge-engineering chassis (cloned at `knowledge-engineering/`)
+  carries 22 phase rubrics and a heartbeat/memory loop. It is the engine.
+- task-master (`.taskmaster/`) is the task list. It is the tool inside.
+- Hamster's docs (323 pages, crawled into `discovery/hamster/pages/`) are
+  the reference architecture for what a brief-shaped product feels like.
+- CMA (Cloudflare control plane) deploys briefs onto the edge.
+
+## Outcome
+
+A brief is a markdown file in `briefs/<slug>.md` that becomes a stable URL
+at `https://subagentbriefs.<account>.workers.dev/<slug>` — readable on
+iPhone Chrome in one tap from a chat link, with structured frontmatter
+and CommonMark-canonical body.
+
+Acceptance:
+1. Operator drops a markdown file in `briefs/`, commits, pushes
+2. CI runs `cmark --to commonmark` over each brief
+3. Worker serves rendered HTML from the rendered markdown at the slug URL
+4. Brief renders on iPhone Chrome without horizontal scroll, no JS required
+5. Each brief has frontmatter: title, status, owner, created, related
+6. Briefs link to each other via slug; broken links fail CI
+
+## Non-goals
+
+- Not a CMS. No web admin UI, no DB.
+- Not Hamster Studio. We are not building briefs/plans/tasks as a SaaS.
+- Not the chassis. The chassis decides the work; this is the surface.
+- Not the iPhone app. Web only, Chrome on iOS, no native shell.
+
+## Working backwards from the outcome
+
+```
+END        iPhone-readable brief page on a stable URL
+                                    ↑
+phase 5    deploy worker to subagentbriefs.<account>.workers.dev
+                                    ↑
+phase 4    worker renders normalized markdown → HTML at /<slug>
+                                    ↑
+phase 3    CI normalizes every brief through cmark --to commonmark
+                                    ↑
+phase 2    briefs/ dir with first 3 briefs in it, frontmatter validated
+                                    ↑
+phase 1    PRD merged, chassis configured to operate from this PRD
+                                    ↑
+START      this file
+```
+
+## Architecture
+
+```
+opensubagents/subagentbriefs (repo, already pushed)
+├── briefs/                       ← human writes here
+│   ├── _template.md
+│   ├── 0001-iphone-html-pages.md
+│   └── <future>.md
+├── .taskmaster/                  ← chassis + task tracking
+│   ├── docs/prd.txt              ← THIS FILE
+│   └── tasks/                    ← generated from PRD
+├── knowledge-engineering/        ← engine (untouched)
+│   ├── rubrics/phase-{0..15}.md
+│   └── seeds/
+├── discovery/hamster/            ← reference docs (323 .md pages)
+├── render/                       ← NEW: worker that serves briefs
+│   ├── src/worker.ts
+│   ├── wrangler.toml
+│   └── package.json
+└── .github/workflows/normalize.yml ← cmark CI
+```
+
+## Component contracts
+
+### brief frontmatter (yaml, 5 fields, all required)
+```yaml
+---
+title: Brief title in sentence case
+slug: 0001-some-slug-here       # must match filename without .md
+status: draft | in-progress | done | abandoned
+owner: github-username
+created: YYYY-MM-DD
+---
+```
+
+### worker route table
+- `GET /`           → index of briefs (slug + title + status, no body)
+- `GET /<slug>`     → rendered HTML of `briefs/<slug>.md`
+- `GET /<slug>.md`  → raw markdown of `briefs/<slug>.md`
+- `GET /robots.txt` → allow all
+- everything else   → 404 with a link back to /
+
+### CI rules
+- Every brief must pass `cmark --to commonmark` round-trip without error
+- Frontmatter must validate against the schema above
+- Every internal link `[text](/slug)` must resolve to an existing brief
+- No external links inside `briefs/` need to resolve (informational only)
+
+## Observability
+
+Each request to the worker emits a span with these attributes:
+- `http.route` = `/<slug>` (templated)
+- `brief.slug` = the slug
+- `brief.status` = the status from frontmatter
+- `render.bytes_in` = markdown source size
+- `render.bytes_out` = HTML output size
+
+These ship to a CF Workers Observability destination (when one exists).
+Until then, spans are written to a Workers Analytics Engine dataset.
+
+## Phase 1 deliverables (what unblocks phase 2)
+
+- This PRD merged to main
+- `briefs/_template.md` exists with the frontmatter schema
+- `briefs/0001-iphone-html-pages.md` exists describing this exact project
+  in brief form (eating our own dog food)
+- README updated to point at the brief flow
+
+## What we are not deciding here
+
+- HTML styling. Pick the minimal sans-serif default. Tailor later.
+- Auth on the worker. Public by default. Lock later if needed.
+- Search across briefs. Out of scope. Use grep + GitHub search.
+- Versioning of briefs beyond `created`. Use git history.
+
+## Out of band
+
+The chassis (`knowledge-engineering/`) is a vendored read-only dependency.
+Do not modify it. If we need new rubrics, copy them to `rubrics/` at the
+top level — never edit under `knowledge-engineering/`.
+
+The Hamster crawl (`discovery/hamster/`) is reference material for the
+shape of a docs site. Do not link to it from briefs. It is local-only.
